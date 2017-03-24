@@ -69,7 +69,7 @@ In the example above, the system 'foo.example.com' will be addressable by ansibl
 
 The script doesn't just provide host and group info.  In addition, as a bonus, when the 'setup' module is run (which happens automatically when using playbooks), the variables 'a', 'b', and 'c' will all be auto-populated in the templates::
 
-    # file: /srv/motd.j2
+    # file: /tmp/motd.j2
     Welcome, I am templated with a value of a={{ a }}, b={{ b }}, and c={{ c }}
 
 Which could be executed just like this::
