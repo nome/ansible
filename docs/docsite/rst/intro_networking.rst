@@ -98,7 +98,7 @@ Consider the following example::
 
 In this example, the value `admin` for `username` and for `password` will override the values `operator` in `cli['username']` and `secret` in `cli['password']`.
 
-This is true for all values in the provider including transport.  So you could have a singular task that is now supported over CLI or NXAPI (assuming the configuration is value). ::
+This is true for all values in the provider, including transport.  So you could have a single task that is supported over CLI or NXAPI (assuming the configuration is value). ::
 
 
     ---
