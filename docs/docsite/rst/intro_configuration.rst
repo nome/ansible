@@ -547,8 +547,8 @@ repositories might handle it like this:
 
     $ mkdir -p /srv/modules
     $ cd /srv/modules
-    $ git checkout https://vendor_modules .
-    $ git checkout ssh://custom_modules .
+    $ git clone https://vendor_modules
+    $ git clone ssh://custom_modules
     $ export ANSIBLE_LIBRARY=/srv/modules/custom_modules:/srv/modules/vendor_modules
     $ ansible [...]
 
