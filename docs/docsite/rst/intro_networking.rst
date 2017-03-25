@@ -53,7 +53,7 @@ By allowing individual tasks to set the transport arguments independently, modul
 
 One downside to this approach is that every task needs to include the required arguments.  This is where the provider argument comes into play. The provider argument accepts keyword arguments and passes them through to the task to assign connection and authentication parameters.
 
-The following two tasks are essentially identical (using nxos_config as an example, but the approach is applicable to all core networking modules)::
+The following two tasks are essentially identical (using :ref:`nxos_config` as an example, but the approach is applicable to all core networking modules)::
 
 
     ---
