@@ -53,7 +53,7 @@ By allowing individual tasks to set the transport arguments independently, modul
 
 One downside to this approach is that every task needs to include the required arguments.  This is where the provider argument comes into play. The provider argument accepts keyword arguments and passes them through to the task to assign connection and authentication parameters.
 
-The following two config modules are essentially identical (using nxos_config) as an example but it applies to all core networking modules::
+The following two tasks are essentially identical (using nxos_config as an example, but the approach is applicable to all core networking modules)::
 
 
     ---
@@ -77,7 +77,8 @@ The following two config modules are essentially identical (using nxos_config) a
        src: config.j2
        provider: "{{ cli }}"
    
-Given the above two examples that are equivalent, the arguments can also be used to establish precedence and defaults.  Consider the following example::
+In the second case, the `cli` variable establishes defaults, which can be overridden in individual tasks.
+Consider the following example::
 
     ---
     vars:
@@ -95,7 +96,7 @@ Given the above two examples that are equivalent, the arguments can also be used
        password: admin
 
 
-In this example, the values of admin for username and admin for password will override the values of operator in cli['username'] and secret in cli['password'])
+In this example, the value `admin` for `username` and for `password` will override the values `operator` in `cli['username']` and `secret` in `cli['password']`.
 
 This is true for all values in the provider including transport.  So you could have a singular task that is now supported over CLI or NXAPI (assuming the configuration is value). ::
 
